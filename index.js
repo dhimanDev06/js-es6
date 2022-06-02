@@ -37,3 +37,11 @@ const loadData = async () =>{
 
 //const data = await 
 loadData().then(res => console.log(res));
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("1","2");
+console.log('unshift exaple ',fruits);
+
+const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
+fruits1.push("1","2");
+console.log('push exmpale ',fruits1);
