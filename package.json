@@ -2,11 +2,11 @@
   "name": "js-es6",
   "version": "1.0.0",
   "description": "js es6 examples",
-  "main": "index.js",
+  "main": "rxjsdemo.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node rxjsdemo.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,9 @@
   },
   "homepage": "https://github.com/dhimanDev06/js-es6#readme",
   "dependencies": {
-    "node-fetch": "^3.2.4"
+    "node-fetch": "^3.2.4",
+    "rxjs": "6.4.*"
   }
+
+  
 }
