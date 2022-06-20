@@ -119,38 +119,27 @@ var json = {
 json['newDemo'] = changeV(json,3);
 console.log('json new ->',json);
 function changeV(aa,v) {
-
-  var p = aa.demo.slice(0, v);
-  
   var m = [];
   separateIt(aa.demo,v).forEach(element => {
-    m.push(processArray(element,v));
+    m.push(processArray(element));
   });
   return m;
 }
 
 function separateIt(arr, size) {
   var newArr = [];
+  var sliceIt;
   for (var i = 0; i < arr.length; i += size) {
-      var sliceIt = arr.slice(i, i + size);
+      sliceIt = arr.slice(i, i + size);
       newArr.push(sliceIt);
   }
-  console.log('json newArr', newArr);
   return newArr;
 }
 
-function processArray (onlyArray,nindx) {
-  let imageCollection = [];
-  // let newArr = [];
-  // for (let i = 0; i < onlyArray.length; i++) {
-  //   let element = onlyArray[i];
-  //   newArr = {...element,...element};
-  // }
-  // console.log('json newArr', newArr);
-  if(nindx === 3){
-    imageCollection = {...onlyArray[0],...onlyArray[1],...onlyArray[2]};
+function processArray (onlyArray) {
+  var merge;
+  for (let i = 0; i < onlyArray.length; i++) {
+    merge = {...merge,...onlyArray[i]};
   }
-  
-  // console.log('onlyArray',onlyArray,imageCollection);
-  return imageCollection;
+  return merge;
 };
