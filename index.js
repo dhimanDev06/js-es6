@@ -119,7 +119,7 @@ var json = {
 json['newDemo'] = changeV(json,3);
 console.log('json new ->',json);
 function changeV(aa,v) {
-  var m = [];
+  let m = [];
   separateIt(aa.demo,v).forEach(element => {
     m.push(processArray(element));
   });
@@ -127,9 +127,9 @@ function changeV(aa,v) {
 }
 
 function separateIt(arr, size) {
-  var newArr = [];
-  var sliceIt;
-  for (var i = 0; i < arr.length; i += size) {
+  let newArr = [];
+  let sliceIt;
+  for (let i = 0; i < arr.length; i += size) {
       sliceIt = arr.slice(i, i + size);
       newArr.push(sliceIt);
   }
@@ -137,7 +137,7 @@ function separateIt(arr, size) {
 }
 
 function processArray (onlyArray) {
-  var merge;
+  let merge;
   for (let i = 0; i < onlyArray.length; i++) {
     merge = {...merge,...onlyArray[i]};
   }
