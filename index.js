@@ -1,9 +1,9 @@
 // Js make private property
 
-class test1{
-   a = 2;
-   #b = 3;
-   static c = 4;
+class test1 {
+  a = 2;
+  #b = 3;
+  static c = 4;
 }
 
 
@@ -15,7 +15,7 @@ console.log(t1.c); //undefined
 
 // Js new feature .at()
 
-let arr = [1,2,4,6,7,3];
+let arr = [1, 2, 4, 6, 7, 3];
 
 console.log(arr.at(0)); //1
 console.log(arr.at(-1)); //2
@@ -24,13 +24,13 @@ console.log(arr.at(-1)); //2
 
 // import fetch from 'node-fetch';
 
-const loadData = async () =>{
+const loadData = async () => {
   try {
     const url = "https://jsonplaceholder.typicode.com/posts"
     const res = await fetch(url)
     const data = await res.json()
     return data
-  }catch(err){
+  } catch (err) {
     console.log(err);
   }
 }
@@ -39,9 +39,118 @@ const loadData = async () =>{
 loadData().then(res => console.log(res));
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.unshift("1","2");
-console.log('unshift exaple ',fruits);
+fruits.unshift("1", "2");
+console.log('unshift exaple ', fruits);
 
 const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
-fruits1.push("1","2");
-console.log('push exmpale ',fruits1);
+fruits1.push("1", "2");
+console.log('push exmpale ', fruits1);
+
+
+console.log('Jvascript Curring')
+
+function table(a) {
+  return function(b){
+    return function (c) {
+      return a * b * c;
+    }
+  }
+}
+
+let t = new table(8);
+console.log("Curring ",t(5)(2));
+console.log("Curring ",new table(2)(3)(4));
+
+
+console.log('JavaScript Call Apply Bind')
+//ifram
+
+//calltack
+
+//fist class heier order function
+
+//event bubbling
+
+// change detection
+
+//dynamik component
+
+
+var json = {
+  demo:[
+    {
+      a:1,
+      b:2
+    },
+    {
+      c:2,
+      d:4
+    },
+    {
+      e:3
+    },
+
+    {
+      a:11,
+      b:22
+    },
+    {
+      c:22,
+      d:44
+    },
+    {
+      e:33
+    },
+
+    {
+      a:111,
+      b:222
+    },
+    {
+      c:222,
+      d:444
+    },
+    {
+      e:333
+    }
+  ]
+}
+
+json['newDemo'] = changeV(json,3);
+console.log('json new ->',json);
+function changeV(aa,v) {
+
+  var p = aa.demo.slice(0, v);
+  
+  var m = [];
+  separateIt(aa.demo,v).forEach(element => {
+    m.push(processArray(element,v));
+  });
+  return m;
+}
+
+function separateIt(arr, size) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i += size) {
+      var sliceIt = arr.slice(i, i + size);
+      newArr.push(sliceIt);
+  }
+  console.log('json newArr', newArr);
+  return newArr;
+}
+
+function processArray (onlyArray,nindx) {
+  let imageCollection = [];
+  // let newArr = [];
+  // for (let i = 0; i < onlyArray.length; i++) {
+  //   let element = onlyArray[i];
+  //   newArr = {...element,...element};
+  // }
+  // console.log('json newArr', newArr);
+  if(nindx === 3){
+    imageCollection = {...onlyArray[0],...onlyArray[1],...onlyArray[2]};
+  }
+  
+  // console.log('onlyArray',onlyArray,imageCollection);
+  return imageCollection;
+};
