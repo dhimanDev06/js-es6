@@ -142,4 +142,42 @@ function processArray (onlyArray) {
     merge = {...merge,...onlyArray[i]};
   }
   return merge;
-};
+}
+
+
+let demoArr = [
+  {
+    a:1,
+    b:2
+  },
+  {
+    a:3,
+    b:4
+  },
+  {
+    a:5,
+    b:6
+  },
+  {
+    a:7,
+    b:8
+  }
+];
+// remove array by key index
+function removeIndex(demoArr,index) {
+  let demokeys = demoArr.keys();
+  let newArr = [];
+  for (let x of demokeys) {
+    newArr.push(x);
+  }
+
+  const isAvail = newArr.indexOf(index);
+  if (isAvail > -1) {
+    newArr.splice(isAvail, 1); 
+  }
+
+  return newArr;
+}
+
+let r = removeIndex(demoArr,0);
+console.log('demoArr',r);
