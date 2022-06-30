@@ -63,17 +63,17 @@ console.log("Curring ",new table(2)(3)(4));
 
 
 console.log('JavaScript Call Apply Bind')
-//ifram
+// ifram
 
-//calltack
+// calltack
 
-//fist class heier order function
+// fist class heier order function
 
-//event bubbling
+// event bubbling
 
 // change detection
 
-//dynamik component
+// dynamik component
 
 
 var json = {
@@ -181,3 +181,35 @@ function removeIndex(demoArr,index) {
 
 let r = removeIndex(demoArr,0);
 console.log('demoArr',r);
+
+//Firt-Order Funtion
+let firstClassFunction = function name(param1) {
+  return function (param2) {
+    console.log(param1+" "+param2)
+  }
+}
+
+firstClassFunction("hi")("dhiman")
+let addFun = (a,b)=>a+b;
+console.log('addFun',addFun(6,9));
+
+//High-Order Funtion
+const btn = document.getElementById('btn1');
+const clickedbtn = () =>{ console.log('clickedbtn clicked');}
+btn.addEventListener('click',clickedbtn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
     <title>Document</title>
 </head>
+
 <body>
     <h1>Javascript</h1>
     <p>Please open Console and have a look</p>
@@ -15,17 +16,46 @@
     </h3>
     <p>
         Currying is a process in functional programming in which we can transform a function
-with multiple arguments into a sequence of nesting functions. It returns a new function
-that expects the next argument inline.
+        with multiple arguments into a sequence of nesting functions. It returns a new function
+        that expects the next argument inline.
     </p>
-
+    <table>
+        <tbody>
+            <tr>
+                <th>First-Order Function</th>
+                <th>Higher-Order Function</th>
+            </tr>
+            <tr>
+                <th>Function are treated as a variable that can be assigned to any other variable or passed as an
+                    argument.</th>
+                <th>Function receives another function as an argument or returns First-order a new function or both.
+                </th>
+            </tr>
+            <tr>
+                <th>The “first-class” concept only has to do with functions in programming languages.</th>
+                <th>The “higher-order” concept can be applied to functions in general, like functions in the
+                    mathematical sense.</th>
+            </tr>
+            <tr>
+                <th>The presence of the First-class function implies the presence of a higher-order function.</th>
+                <th>The presence of a Higher-order function does not imply the presence of a First-order function.</th>
+            </tr>
+        </tbody>
+    </table>
+    <button id="btn1">Chick</button>
 </body>
+
 </html>
 <style>
-    body{
+    body {
         margin: 0 100px;
     }
-    body h1,h3, p:first-of-type{
+
+    body h1,
+    h3,
+    p:first-of-type {
         text-align: center;
     }
 </style>
+
+<script src="index.js"></script>
