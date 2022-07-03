@@ -60,14 +60,12 @@ function table(a) {
 let t = new table(8);
 console.log("Curring ",t(5)(2));
 console.log("Curring ",new table(2)(3)(4));
-
+// console.log(abd);
 
 console.log('JavaScript Call Apply Bind')
 // ifram
 
 // calltack
-
-// fist class heier order function
 
 // event bubbling
 
@@ -197,12 +195,28 @@ console.log('addFun',addFun(6,9));
 const btn = document.getElementById('btn1');
 const clickedbtn = () =>{ console.log('clickedbtn clicked');}
 btn.addEventListener('click',clickedbtn);
+// abd = 22222222222222222222
+// var abd;
 
+{/* <p id="abc"></p> */}
+callA();
+document.getElementById('abc').innerHTML = a * a; 
+function callA() {
+  a = 4;
+}
 
+var afun = function () {
+  for (var i = 0; i < 5; i++) {
+    setTimeout(() => {
+      function name() {
+        console.log(i)
+      }
+      name();
+    }, i*1000);
+  }
+}
 
-
-
-
+afun();
 
 
 
