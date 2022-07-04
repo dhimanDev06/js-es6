@@ -210,3 +210,22 @@ console.log(getItem(['a','b','c'],'aa','178'));
     console.log(personObj2); // retun new Param object
 
 }
+
+// Question 14
+// Deep copy or Object Clone
+{
+
+    const user = {
+        name:'Dhiman',
+        age: 32
+    }
+
+    const u1 = Object.assign({},user);
+    const u2 = JSON.parse(JSON.stringify(user));
+    const u3 = { ...user };
+    delete user.age;
+    user.name = "Suman"
+    console.log(u1,u2,u3,user);
+
+
+}
