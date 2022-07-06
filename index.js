@@ -205,18 +205,7 @@ function callA() {
   a = 4;
 }
 
-var afun = function () {
-  for (var i = 0; i < 5; i++) {
-    setTimeout(() => {
-      function name() {
-        console.log(i)
-      }
-      name();
-    }, i*1000);
-  }
-}
 
-afun();
 
 
 
