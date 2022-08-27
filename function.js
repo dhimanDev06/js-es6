@@ -83,7 +83,7 @@ console.log(square(5))
           }
       }
       
-      afun();
+    //   afun();
 }
 
 // Question 7
@@ -152,6 +152,8 @@ var  aaa = 4 // global vaiable
 // Question 11
 // Arrow funtion vs Normal function
 {
+
+    console.log("Arrow funtion vs Normal function");
     function nfuc() {
         console.log(arguments); // only applicable on normal function
     }
@@ -164,14 +166,42 @@ var  aaa = 4 // global vaiable
     afunc(1,2,3,4);
 
 
-    function nfuc1(a,b) {
-        // let a = 11;
-        console.log("this -",this.a); // only applicable on normal function
+    function nfuc1(ax,b) {
+        var ax = 11;
+        console.log("this ->",this); // only applicable on normal function
     }
-    nfuc1(1,2)
+    nfuc1(1234,2)
 
-    let afunc1 = (a,b)=>{
-        console.log("this =>-",this.b); // it will disply global b;
+    let afunc1 = (a,ax)=>{
+        var ax = 11;
+        console.log("this =>",this); // it will disply global b;
     }
     afunc1(1,2)
+
+    let user = {
+        name:'dhiman',
+        age:32,
+        getDetailsA : () => {
+            console.log('this 1',this); // this inside arrow funtion
+        },
+        getDetailsN ()  {
+            console.log('this 2',this); // this inside normal funtion
+        },
+        childA : ()=> {
+            const nestedArrow = () =>{
+                console.log('this 3',this); // this inside arrow funtion nested arrow funtion
+            }
+            nestedArrow()
+        },
+        childN () {
+            const nestedArrow = () =>{
+                console.log('this 4',this); // this inside normal funtion nested arrow funtion
+            }
+            nestedArrow()
+        }
+    }
+    user.getDetailsA()
+    user.getDetailsN()
+    user.childA()
+    user.childN()
 }

@@ -15,7 +15,7 @@ console.log(t1.c); //undefined
 
 // Js new feature .at()
 
-let arr = [1, 2, 4, 6, 7, 3];
+let arr = [1, 2, 4, 6, 7, 32];
 
 console.log(arr.at(0)); //1
 console.log(arr.at(-1)); //2
@@ -39,7 +39,7 @@ const loadData = async () => {
 loadData().then(res => console.log(res));
 
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits.unshift("1", "2");
+fruits.unshift("11", "2");
 console.log('unshift exaple ', fruits);
 
 const fruits1 = ["Banana", "Orange", "Apple", "Mango"];
