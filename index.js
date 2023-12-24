@@ -4,6 +4,19 @@ class test1 {
   a = 2;
   #b = 3;
   static c = 4;
+  d;
+  myname = 'dhiman'
+  get abc(){
+    this.d = this.c
+    return this.#b;
+  }
+  get changeName(){ // getter
+    return this.myname
+  }
+  set changeName(name){ // setter
+    this.myname = name
+  }
+  
 }
 
 
@@ -11,6 +24,16 @@ let t1 = new test1();
 console.log(t1.a); //it will show 2 
 console.log(t1.b); //undefined
 console.log(t1.c); //undefined
+console.log("abc",t1.abc)
+console.log("d",t1.d)
+console.log("staticC",t1.staticC)
+console.log("myname 1",t1.myname)
+t1.changeName = "Susmita";
+console.log("myname 2",t1.changeName)
+
+
+
+
 
 
 // Js new feature .at()
@@ -205,6 +228,25 @@ function callA() {
   a = 4;
 }
 
+
+{
+  /** generator function **/
+
+  function* tableFunc(pr,indx) {
+    let index = 0;
+    while (index < indx) {
+      yield pr * index++;
+    }
+  }
+  const gen = tableFunc(5,15);
+  console.log("generator",gen.next().value);
+  console.log("generator",gen.next().value);
+  console.log("generator",gen.next().value);
+  console.log("generator",gen.next().value);
+  console.log("generator",gen.next().value);
+  console.log("generator",gen.next().value);
+
+}
 
 
 
